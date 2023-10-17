@@ -1,0 +1,27 @@
+import Avatar from "./avatar";
+import DateFormatter from "./date-formatter";
+import PostTitle from "./post-title";
+import type Author from "../../interfaces/author";
+
+type Props = {
+  title: string;
+  date: string;
+  author: Author;
+};
+
+const PostHeader = ({ title,date, author }: Props) => {
+  return (
+    <>
+      <PostTitle>{title}</PostTitle>
+      <div className="max-w-2xl mx-auto">
+        <div className="flex justify-between mb-4">
+          <Avatar name={author.name} picture={author.picture} />
+          <DateFormatter dateString={date} />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PostHeader;
+

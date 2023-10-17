@@ -1,0 +1,454 @@
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.border {
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: radial-gradient(
+    ellipse at var(--gradX) var(--gradY),
+    #00ffdd 10%,
+    #159685 43%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: animateBorder 10s linear infinite forwards;
+
+  /* content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  width: 200%;
+  height: 800px;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(90deg, #033aff 50%, #0a0c36 100%),
+    linear-gradient(#0a0c36, #0a0c36), linear-gradient(#0a0c36, #0a0c36),
+    linear-gradient(90deg, #033aff 50%, #0a0c36 100%);
+  animation: rotate 4s linear infinite;
+  box-sizing: border-box; */
+}
+
+@keyframes animateBorder {
+  0% { 
+    --gradX:50%;
+    --gradY:0%;
+    }
+    1% { 
+    --gradX:52%;
+    --gradY:2%;
+    }
+    2% { 
+    --gradX:54%;
+    --gradY:4%;
+    }
+    3% { 
+    --gradX:56%;
+    --gradY:6%;
+    }
+    4% { 
+    --gradX:58%;
+    --gradY:8%;
+    }
+    5% { 
+    --gradX:60%;
+    --gradY:10%;
+    }
+    6% { 
+    --gradX:62%;
+    --gradY:12%;
+    }
+    7% { 
+    --gradX:64%;
+    --gradY:14%;
+    }
+    8% { 
+    --gradX:66%;
+    --gradY:16%;
+    }
+    9% { 
+    --gradX:68%;
+    --gradY:18%;
+    }
+    10% { 
+    --gradX:70%;
+    --gradY:20%;
+    }
+    11% { 
+    --gradX:72%;
+    --gradY:22%;
+    }
+    12% { 
+    --gradX:74%;
+    --gradY:24%;
+    }
+    13% { 
+    --gradX:76%;
+    --gradY:26%;
+    }
+    14% { 
+    --gradX:78%;
+    --gradY:28%;
+    }
+    15% { 
+    --gradX:80%;
+    --gradY:30%;
+    }
+    16% { 
+    --gradX:82%;
+    --gradY:32%;
+    }
+    17% { 
+    --gradX:84%;
+    --gradY:34%;
+    }
+    18% { 
+    --gradX:86%;
+    --gradY:36%;
+    }
+    19% { 
+    --gradX:88%;
+    --gradY:38%;
+    }
+    20% { 
+    --gradX:90%;
+    --gradY:40%;
+    }
+    21% { 
+    --gradX:92%;
+    --gradY:42%;
+    }
+    22% { 
+    --gradX:94%;
+    --gradY:44%;
+    }
+    23% { 
+    --gradX:96%;
+    --gradY:46%;
+    }
+    24% { 
+    --gradX:98%;
+    --gradY:48%;
+    }
+    25% { 
+    --gradX:100%;
+    --gradY:50%;
+    }
+    26% { 
+    --gradX:98%;
+    --gradY:52%;
+    }
+    27% { 
+    --gradX:96%;
+    --gradY:54%;
+    }
+    28% { 
+    --gradX:94%;
+    --gradY:56%;
+    }
+    29% { 
+    --gradX:92%;
+    --gradY:58%;
+    }
+    30% { 
+    --gradX:90%;
+    --gradY:60%;
+    }
+    31% { 
+    --gradX:88%;
+    --gradY:62%;
+    }
+    32% { 
+    --gradX:86%;
+    --gradY:64%;
+    }
+    33% { 
+    --gradX:84%;
+    --gradY:66%;
+    }
+    34% { 
+    --gradX:82%;
+    --gradY:68%;
+    }
+    35% { 
+    --gradX:80%;
+    --gradY:70%;
+    }
+    36% { 
+    --gradX:78%;
+    --gradY:72%;
+    }
+    37% { 
+    --gradX:76%;
+    --gradY:74%;
+    }
+    38% { 
+    --gradX:74%;
+    --gradY:76%;
+    }
+    39% { 
+    --gradX:72%;
+    --gradY:78%;
+    }
+    40% { 
+    --gradX:70%;
+    --gradY:80%;
+    }
+    41% { 
+    --gradX:68%;
+    --gradY:82%;
+    }
+    42% { 
+    --gradX:66%;
+    --gradY:84%;
+    }
+    43% { 
+    --gradX:64%;
+    --gradY:86%;
+    }
+    44% { 
+    --gradX:62%;
+    --gradY:88%;
+    }
+    45% { 
+    --gradX:60%;
+    --gradY:90%;
+    }
+    46% { 
+    --gradX:58%;
+    --gradY:92%;
+    }
+    47% { 
+    --gradX:56%;
+    --gradY:94%;
+    }
+    48% { 
+    --gradX:54%;
+    --gradY:96%;
+    }
+    49% { 
+    --gradX:52%;
+    --gradY:98%;
+    }
+    50% { 
+    --gradX:50%;
+    --gradY:100%;
+    }
+    51% { 
+    --gradX:48%;
+    --gradY:98%;
+    }
+    52% { 
+    --gradX:46%;
+    --gradY:96%;
+    }
+    53% { 
+    --gradX:44%;
+    --gradY:94%;
+    }
+    54% { 
+    --gradX:42%;
+    --gradY:92%;
+    }
+    55% { 
+    --gradX:40%;
+    --gradY:90%;
+    }
+    56% { 
+    --gradX:38%;
+    --gradY:88%;
+    }
+    57% { 
+    --gradX:36%;
+    --gradY:86%;
+    }
+    58% { 
+    --gradX:34%;
+    --gradY:84%;
+    }
+    59% { 
+    --gradX:32%;
+    --gradY:82%;
+    }
+    60% { 
+    --gradX:30%;
+    --gradY:80%;
+    }
+    61% { 
+    --gradX:28%;
+    --gradY:78%;
+    }
+    62% { 
+    --gradX:26%;
+    --gradY:76%;
+    }
+    63% { 
+    --gradX:24%;
+    --gradY:74%;
+    }
+    64% { 
+    --gradX:22%;
+    --gradY:72%;
+    }
+    65% { 
+    --gradX:20%;
+    --gradY:70%;
+    }
+    66% { 
+    --gradX:18%;
+    --gradY:68%;
+    }
+    67% { 
+    --gradX:16%;
+    --gradY:66%;
+    }
+    68% { 
+    --gradX:14%;
+    --gradY:64%;
+    }
+    69% { 
+    --gradX:12%;
+    --gradY:62%;
+    }
+    70% { 
+    --gradX:10%;
+    --gradY:60%;
+    }
+    71% { 
+    --gradX:8%;
+    --gradY:58%;
+    }
+    72% { 
+    --gradX:6%;
+    --gradY:56%;
+    }
+    73% { 
+    --gradX:4%;
+    --gradY:54%;
+    }
+    74% { 
+    --gradX:2%;
+    --gradY:52%;
+    }
+    75% { 
+    --gradX:0%;
+    --gradY:50%;
+    }
+    76% { 
+    --gradX:2%;
+    --gradY:48%;
+    }
+    77% { 
+    --gradX:4%;
+    --gradY:46%;
+    }
+    78% { 
+    --gradX:6%;
+    --gradY:44%;
+    }
+    79% { 
+    --gradX:8%;
+    --gradY:42%;
+    }
+    80% { 
+    --gradX:10%;
+    --gradY:40%;
+    }
+    81% { 
+    --gradX:12%;
+    --gradY:38%;
+    }
+    82% { 
+    --gradX:14%;
+    --gradY:36%;
+    }
+    83% { 
+    --gradX:16%;
+    --gradY:34%;
+    }
+    84% { 
+    --gradX:18%;
+    --gradY:32%;
+    }
+    85% { 
+    --gradX:20%;
+    --gradY:30%;
+    }
+    86% { 
+    --gradX:22%;
+    --gradY:28%;
+    }
+    87% { 
+    --gradX:24%;
+    --gradY:26%;
+    }
+    88% { 
+    --gradX:26%;
+    --gradY:24%;
+    }
+    89% { 
+    --gradX:28%;
+    --gradY:22%;
+    }
+    90% { 
+    --gradX:30%;
+    --gradY:20%;
+    }
+    91% { 
+    --gradX:32%;
+    --gradY:18%;
+    }
+    92% { 
+    --gradX:34%;
+    --gradY:16%;
+    }
+    93% { 
+    --gradX:36%;
+    --gradY:14%;
+    }
+    94% { 
+    --gradX:38%;
+    --gradY:12%;
+    }
+    95% { 
+    --gradX:40%;
+    --gradY:10%;
+    }
+    96% { 
+    --gradX:42%;
+    --gradY:8%;
+    }
+    97% { 
+    --gradX:44%;
+    --gradY:6%;
+    }
+    98% { 
+    --gradX:46%;
+    --gradY:4%;
+    }
+    99% { 
+    --gradX:48%;
+    --gradY:2%;
+    }
+    100% { 
+    --gradX:50%;
+    --gradY:0%;
+    }
+}

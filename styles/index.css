@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-shade;
+  overflow: hidden;
+  user-select: none;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../public/assets/fonts/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../public/assets/fonts/SF-Pro-Text-Black.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../public/assets/fonts/SF-Pro-Text-Semibold.otf");
+  font-weight: 700;
+}
+

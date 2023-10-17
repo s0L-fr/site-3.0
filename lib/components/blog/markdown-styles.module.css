@@ -1,0 +1,23 @@
+.markdown {
+  @apply text-lg leading-relaxed text-white;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6 text-white;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug text-white;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug text-white;
+}
+
+.markdown pre {
+  @apply max-w-2xl block break-words text-sm p-4 border-2 border-white/50 rounded-md;
+  background: linear-gradient(330deg, rgb(17, 32, 59) 0%, rgba(0,0,0,1) 100%);
+}
